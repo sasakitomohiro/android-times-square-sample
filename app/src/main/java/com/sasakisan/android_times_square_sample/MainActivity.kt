@@ -18,12 +18,8 @@ class MainActivity : AppCompatActivity() {
         val minDate = Calendar.getInstance()
         val today = Date()
 
-        maxDate.apply {
-            set(2100, 12, 1, 0, 0)
-        }
-        minDate.apply {
-            set(1900, 0, 1, 0, 0)
-        }
+        maxDate.set(2100, 12, 1, 0, 0)
+        minDate.set(1900, 0, 1, 0, 0)
 
         calendar.init(minDate.time, maxDate.time)
             .withSelectedDate(today)
